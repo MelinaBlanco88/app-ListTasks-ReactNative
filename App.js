@@ -20,7 +20,7 @@ export default function App() {
     const newArr = [...items, { id: Date.now(), value: itemText }];
     setItems(newArr);
     setItemText("");
-  };
+  }; 
 
   const openModal = (item) => {
     setSelectedItem(item);
