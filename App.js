@@ -10,7 +10,12 @@ export default function App() {
   const [items, setItems] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  
   const [itemComplete, setItemComplete] = useState(false);
+
+  const onComplete = () => {
+    setItemComplete(itemComplete => itemComplete(true));
+  };
 
   const onChangeText = (text) => {
     setItemText(text);
@@ -25,10 +30,6 @@ export default function App() {
   const openModal = (item) => {
     setSelectedItem(item);
     setModalVisible(true);
-  };
-
-  const onComplete = () => {
-    setItemComplete(true);
   };
 
   const onCancelModal = () => {
@@ -55,6 +56,7 @@ export default function App() {
         items={items} 
         openModal={openModal} 
         itemComplete={itemComplete}
+        setItemComplete={setItemComplete}
         onComplete={onComplete}
       />
 

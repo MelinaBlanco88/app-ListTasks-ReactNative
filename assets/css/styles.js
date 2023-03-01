@@ -95,5 +95,11 @@ export const styles = StyleSheet.create({
       marginTop: 50,
     },
 
+    itemCompleted: {
+      textDecorationColor: "line-through",
+      backgroundColor: "green",
+      padding: 5,
+    }
+
   });
   
