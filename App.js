@@ -13,19 +13,22 @@ export default function App() {
   
   const [itemComplete, setItemComplete] = useState(false);
 
-  const onComplete = () => {
-    setItemComplete(true);
-  };
+  
 
   const onChangeText = (text) => {
     setItemText(text);
   };
 
   const addItem = () => {
-    const newArr = [...items, { id: Date.now(), value: itemText }];
+    const newArr = [...items, {  id: Date.now(), value: itemText, isChecked: false }];
     setItems(newArr);
     setItemText("");
   }; 
+
+  const onComplete = (id) => {
+    setItemComplete(!itemComplete);
+    items.find(item => item.id === id).isChecked = true;
+  };
 
   const openModal = (item) => {
     setSelectedItem(item);

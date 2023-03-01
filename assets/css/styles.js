@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Colors from "../../src/constants/Colors";
 
 export const styles = StyleSheet.create({
     screen: {
@@ -97,8 +98,13 @@ export const styles = StyleSheet.create({
 
     itemCompleted: {
       textDecorationColor: "line-through",
-      backgroundColor: "green",
-      padding: 5,
+      backgroundColor: "#B3E5BE",
+      borderRadius: 5,
+      padding: 8,
+    },
+
+    itemIncomplete: {
+      padding: 8,
     }
 
   });

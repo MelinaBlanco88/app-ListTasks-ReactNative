@@ -11,16 +11,12 @@ const Item = ({ itemData, openModal, itemComplete, setItemComplete, onComplete }
 
       <Pressable
         onPress={() => {
-          onComplete;
-          console.log(onComplete);
+          onComplete(itemData.item.id);
+          console.log("test", itemData.item.id);
         }}
 
-        style={() => [
-        {
-          onComplete: true
-            ? "styles.itemCompleted" : "styles.itemIncomplete"
-        },
-      ]}>
+        style = {[ itemComplete ? styles.itemCompleted : styles.itemIncomplete ]}
+      >
       
         <Text>Completado</Text>
       </Pressable>
