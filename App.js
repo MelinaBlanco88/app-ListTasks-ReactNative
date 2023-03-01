@@ -14,7 +14,7 @@ export default function App() {
   const [itemComplete, setItemComplete] = useState(false);
 
   const onComplete = () => {
-    setItemComplete(itemComplete => itemComplete(true));
+    setItemComplete(true);
   };
 
   const onChangeText = (text) => {
