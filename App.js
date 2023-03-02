@@ -26,8 +26,13 @@ export default function App() {
   }; 
 
   const onComplete = (id) => {
-    setItemComplete(!itemComplete);
-    items.find(item => item.id === id).isChecked = true;
+    const newItems = items.map(item => {
+      if (item.id === id) {
+        return { ...item, isChecked: !item.isChecked };
+      }
+      return item;
+    })
+    setItems(newItems);
   };
 
   const openModal = (item) => {

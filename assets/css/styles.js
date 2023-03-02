@@ -97,8 +97,8 @@ export const styles = StyleSheet.create({
     },
 
     itemCompleted: {
-      textDecorationColor: "line-through",
-      backgroundColor: "#B3E5BE",
+      textDecoration: "lineThrough",
+      backgroundColor: "#3AE593",
       borderRadius: 5,
       padding: 8,
     },

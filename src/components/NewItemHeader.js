@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { Button, FlatList, Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View, Modal, Pressable, Dimensions } from 'react-native';
+import { Text, TextInput, View, Pressable } from 'react-native';
 import { styles } from '../../assets/css/styles.js'
 
 const NewItemHeader = ({

@@ -2,7 +2,7 @@ import { Text, Pressable, View } from "react-native";
 import React from "react";
 import { styles } from "../../../assets/css/styles";
 
-const Item = ({ itemData, openModal, itemComplete, setItemComplete, onComplete }) => {
+const Item = ({ itemData, openModal, onComplete }) => {
   return (
     <View style={styles.itemContainer}>
       <Text style={styles.item}>
@@ -13,9 +13,9 @@ const Item = ({ itemData, openModal, itemComplete, setItemComplete, onComplete }
         onPress={() => {
           onComplete(itemData.item.id);
           console.log("test", itemData.item.id);
-        }}
+        } }
 
-        style = {[ itemComplete ? styles.itemCompleted : styles.itemIncomplete ]}
+        style = {[ itemData.item.isChecked ? styles.itemCompleted : styles.itemIncomplete ]}
       >
       
         <Text>Completado</Text>
