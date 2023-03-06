@@ -4,6 +4,7 @@ import { styles } from "../../../assets/css/styles";
 
 const Item = ({ itemData, openModal, onComplete }) => {
   return (
+    <>
     <View style={styles.itemContainer}>
       <Text style={styles.item}>
         {itemData.item.value}
@@ -12,7 +13,6 @@ const Item = ({ itemData, openModal, onComplete }) => {
       <Pressable
         onPress={() => {
           onComplete(itemData.item.id);
-          console.log("test", itemData.item.id);
         } }
 
         style = {[ itemData.item.isChecked ? styles.itemCompleted : styles.itemIncomplete ]}
@@ -27,9 +27,12 @@ const Item = ({ itemData, openModal, onComplete }) => {
           openModal(itemData.item);
         }}
       >
-        <Text>X</Text>
+        <Text style={styles.colorWhite}>X</Text>
       </Pressable>
+
+      
     </View>
+    </>
   );
 };
 

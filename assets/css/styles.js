@@ -2,10 +2,34 @@ import { StyleSheet } from "react-native";
 import Colors from "../../src/constants/Colors";
 
 export const styles = StyleSheet.create({
+    colorWhite: {
+      color: Colors.white
+    },
+
+    fontBold: {
+      fontWeight: 'bold',
+      fontFamily: 'open-sans-bold',
+    },
+
+    header: {
+      height: 90,
+      paddingTop: 36,
+      backgroundColor: Colors.accent,
+      alignItems: 'center', 
+      justifyContent: 'center'
+    },
+
+    textHeader: {
+      color: Colors.white,
+      fontFamily: 'open-sans',
+      fontSize: 24,
+    },
+
     screen: {
-      flex: 1,
-      backgroundColor: '#F5F5F5',
-      padding: 30,
+      paddingLeft: 20,
+      paddingRight: 20,
+      paddingTop: 10,
+      paddingBottom: 10,
     },
 
     container: {
@@ -15,19 +39,20 @@ export const styles = StyleSheet.create({
     inputContainer: {
       flexDirection: 'row',
       marginTop: 30,
+      marginBottom: 20,
       justifyContent: 'space-between',
       alignItems: 'center',
     },
   
     input: {
-      borderBottomColor:'black',
+      borderBottomColor: Colors.black,
       minWidth: 200,
       borderBottomWidth:1,
       height: 50
     },
 
     button: {
-      backgroundColor: '#5D3891',
+      backgroundColor: Colors.primary,
       paddingLeft: 20,
       paddingRight: 20,
       height: 50,
@@ -39,25 +64,27 @@ export const styles = StyleSheet.create({
     },
 
     buttonDelete: {
-      backgroundColor: '#ff6161',
-      color: "#FFFFFF",
-      padding: 8,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: Colors.alert,
+      color: Colors.white,
+      borderRadius: '50%',
+      width: 30,
+      height: 30,
+      
     },
 
     warning: {
-      backgroundColor: '#ff6161',
-      color: "#FFFFFF",
-    },
-
-    textButton: {
-      color: '#ffffff',
+      backgroundColor: Colors.alert,
+      color: Colors.white,
+      fontFamily: 'open-sans',
     },
 
     contentList: {
       marginTop: 20,
       padding: 10,
       margin: 0,
-      backgroundColor: "#c5f7f0",
     },
 
     itemContainer: {
@@ -66,20 +93,24 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'space-between',
       gap: 30,
-      margin: 10,
-      padding: 10,
+      marginTop: 5,
+      marginBottom: 5,
+      padding: 8,
       borderRadius: 5,
-      backgroundColor: "#ccc",
+      borderWidth: 2,
+      borderColor: Colors.accent,
+      borderStyle: 'solid',
     },
 
     item: {
+      fontFamily: 'open-sans-bold',
       padding: 10,
       textAlign: "center",
     },
 
     modalContainer: {
-      height: 400,
-      width: 300,
+      height: '100%',
+      width: '100%',
       marginTop: 100,
       alignSelf: 'center',
       backgroundColor: '#fffaeb',
@@ -97,15 +128,18 @@ export const styles = StyleSheet.create({
     },
 
     itemCompleted: {
-      textDecoration: "lineThrough",
-      backgroundColor: "#3AE593",
+      backgroundColor: Colors.primary,
       borderRadius: 5,
       padding: 8,
     },
 
     itemIncomplete: {
       padding: 8,
-    }
+    },
 
+    instructions: {
+      fontSize: 18,
+      textAlign: 'center'
+    }
   });
   

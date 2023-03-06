@@ -22,7 +22,7 @@ const NewItemHeader = ({
         */}
 
         <Pressable onPress={addItem} style={styles.button}>
-        <Text style={styles.textButton}>Agregar</Text>
+        <Text style={styles.colorWhite}>Agregar</Text>
         </Pressable>
     </View>
   )

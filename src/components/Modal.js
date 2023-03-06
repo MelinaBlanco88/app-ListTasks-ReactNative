@@ -23,18 +23,18 @@ const Modal = ({
                 }}>Eliminar Item</Text>
             </View>
             <View styles={styles.modalContent}>
-                <Text styles={styles.marginBottom}>¿Está seguro que desea eliminar el item {selectedItem?.value}?</Text>
+                <Text styles={styles.fontBold}>¿Está seguro que desea eliminar el item <Text styles={styles.fontBold}>{selectedItem?.value}</Text>?</Text>
             </View>
             
             <View styles={styles.modalActions}>
                 <Pressable onPress={onCancelModal} style={styles.button}>
-                    <Text style={styles.textButton}>Cancelar</Text>
+                    <Text style={styles.colorWhite}>Cancelar</Text>
                 </Pressable>
 
                 <Pressable onPress={() => {
                     onDeleteModal(selectedItem.id);
                 }} style={[styles.button, styles.warning]}>
-                    <Text style={styles.textButton}>Eliminar</Text>
+                    <Text style={styles.colorWhite}>Eliminar</Text>
                 </Pressable>
             </View>
         </View>
