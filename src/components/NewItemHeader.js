@@ -10,17 +10,13 @@ const NewItemHeader = ({
   return (
     <View style={styles.inputContainer}>
         <TextInput
-            placeholder="Item de lista"
+            placeholder="Tarea (Máx. 20 caracteres)"
             style={styles.input}
+            maxLength={20}
             onChangeText={onChangeText}
             value={itemText}
         />
-        
-        {/* 
-        Boton por default:
-        <Button title="Agregar" onPress={addItem} /> 
-        */}
-
+      
         <Pressable onPress={addItem} style={styles.button}>
         <Text style={styles.colorWhite}>Agregar</Text>
         </Pressable>

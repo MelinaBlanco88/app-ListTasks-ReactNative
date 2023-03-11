@@ -47,6 +47,7 @@ export const styles = StyleSheet.create({
     input: {
       borderBottomColor: Colors.black,
       minWidth: 200,
+      maxWidth: 300,
       borderBottomWidth:1,
       height: 50
     },
@@ -59,6 +60,9 @@ export const styles = StyleSheet.create({
       borderRadius: 5,
       marginTop: 10,
       alignItems: 'center',
+      maxWidth: 200,
+      marginLeft: 'auto',
+      marginRight: 'auto',
       display: 'block',
       justifyContent: 'center'
     },
